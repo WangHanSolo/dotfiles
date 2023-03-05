@@ -1,0 +1,6 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =4
+let g:netrw_dirhist_4='/home/han/.vim/plugged'
+let g:netrw_dirhist_3='/home/han/.vim'
+let g:netrw_dirhist_2='/home/han/.vim/autoload'
+let g:netrw_dirhist_1='/home/han/.vim'
