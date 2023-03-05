@@ -1,5 +1,11 @@
 #!/bin/bash
 
+rm $HOME/.vimrc
+rm $HOME/.vim
+rm -rf $HOME/.oh-my-zsh
+rm $HOME/.zshrc
+rm $HOME/.p10k.zsh
+
 # Install tmux
 echo 'Install tmux'
 sudo apt install tmux
@@ -7,23 +13,18 @@ sudo apt install tmux
 # Symlink vimrc
 echo 'Install vim'
 sudo apt install curl git vim
-rm $HOME/.vimrc
 ln -s $HOME/.dotfiles/.vimrc $HOME/.vimrc
-rm $HOME/.vim
 ln -s $HOME/.dotfiles/.vim $HOME/.vim
-
-# Install zsh
-echo  'Install zsh and oh-my-zsh'
+ 
+ # Install zsh and set as default
+echo  'Install zsh'
 sudo apt install zsh
+ 
 chsh -s $(which zsh) # set zsh to default
-exec zsh
-rm -rf $HOME/.oh-my-zsh
+ 
+echo 'Install oh-my-zsh'
 curl -L https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
-
-rm $HOME/.zshrc
-ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
-
-
+ 
 # powerlevel 10k
 ln -s $HOME/.dotfiles/.p10k.zsh $HOME/.p10k.zsh
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
@@ -31,4 +32,8 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 # autosuggestions
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
-
+ 
+rm $HOME/.zshrc
+ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
+ 
+exec zsh
