@@ -115,3 +115,10 @@ source $ZSH/oh-my-zsh.sh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+PATH=/home/han/.local/bin:$PATH
+GTK_DEBUG=interactive
+export GTK_DEBUG=interactive
+export PATH=/home/han/.local/bin:/home/han/.local/bin:/home/han/.local/bin:/home/han/.local/bin:/home/han/.local/bin:/home/han/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:~/.dofiles/scripts
+export GTK_DEBUG=interactive
+export PATH=/home/han/.local/bin:/home/han/.local/bin:/home/han/.local/bin:/home/han/.local/bin:/home/han/.local/bin:/home/han/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin:/snap/bin:/home/han/.dofiles/scripts:~/.dotfiles/scripts

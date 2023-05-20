@@ -1,0 +1,6 @@
+#!/bin/bash
+echo "Searching for: $@"
+for term in $@ ; do
+    search="$search+$term"
+done 
+    open "http://www.google.com/search?q=$search" 2> /dev/null
