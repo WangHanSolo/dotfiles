@@ -8,17 +8,20 @@ rm $HOME/.p10k.zsh
 
 # Install tmux
 echo 'Install tmux'
-sudo apt install tmux
+sudo apt -y install tmux
 
 # Symlink vimrc
 echo 'Install vim'
-sudo apt install curl git vim
+sudo apt -y install curl git vim
 ln -s $HOME/.dotfiles/.vimrc $HOME/.vimrc
 ln -s $HOME/.dotfiles/.vim $HOME/.vim
  
  # Install zsh and set as default
 echo  'Install zsh'
-sudo apt install zsh
+sudo apt -y install zsh
+
+# Install ccmake 
+sudo apt -y install cmake-curses-gui
  
 chsh -s $(which zsh) # set zsh to default
  
