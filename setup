@@ -6,6 +6,9 @@ rm -rf $HOME/.oh-my-zsh
 rm $HOME/.zshrc
 rm $HOME/.p10k.zsh
 
+# Install curl
+sudo apt -y install curl
+
 # Install tmux
 echo 'Install tmux'
 sudo apt -y install tmux
