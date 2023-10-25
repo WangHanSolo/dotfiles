@@ -1,53 +1,7 @@
 #!/bin/bash
 
-rm $HOME/.vimrc
-rm $HOME/.vim
-rm -rf $HOME/.oh-my-zsh
-rm $HOME/.zshrc
-rm $HOME/.p10k.zsh
-
-# Install curl
-sudo apt -y install curl
-
-# Install tmux
-echo 'Install tmux'
-sudo apt -y install tmux
-
-# Symlink vimrc
-echo 'Install vim'
-sudo apt -y install curl git vim
-ln -s $HOME/.dotfiles/.vimrc $HOME/.vimrc
-ln -s $HOME/.dotfiles/.vim $HOME/.vim
- 
- # Install zsh and set as default
-echo  'Install zsh'
-sudo apt -y install zsh
-
-# Install ccmake 
-sudo apt -y install cmake-curses-gui
-
-#Install pip
-sudo apt -y install python3-pip
- 
-chsh -s $(which zsh) # set zsh to default
- 
-echo 'Install oh-my-zsh'
-curl -L https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
- 
-# powerlevel 10k
-ln -s $HOME/.dotfiles/.p10k.zsh $HOME/.p10k.zsh
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
-# syntax highlight
-git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-# autosuggestions
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
- 
-rm $HOME/.zshrc
-ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
-
-ln -s $HOME/.dotfiles/.tmux.conf $HOME/.tmux.conf
-
-echo "export PATH=$PATH:~/.dotfiles/scripts" >> $HOME/.zshrc
-
- 
-exec zsh
+if [ "$(uname)" == "Darwin" ]; then
+    ./mac_setup;
+else  [ "$(expr substr $(uname -s) 1 5)" == "Linux" ] then
+    ./linux_setup
+fi
