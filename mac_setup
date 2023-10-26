@@ -51,4 +51,4 @@ echo "PATH=/usr/local/bin:$PATH" >> ~/.zshrc
 
 ln -s $HOME/.dotfiles/.tmux.conf $HOME/.tmux.conf
  
-echo "export PATH=$PATH:~/.dotfiles/scripts" >> $HOME/.zshrc
+echo "PATH=$PATH:~/.dotfiles/scripts" >> $HOME/.zshrc
