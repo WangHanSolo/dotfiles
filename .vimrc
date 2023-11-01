@@ -29,3 +29,6 @@ autocmd InsertLeave * set nocul
 let g:netrw_bufsettings = 'noma nomod nu nowrap ro nobl'
 
 set hlsearch
+
+set backspace=indent,eol,start
+
