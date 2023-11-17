@@ -18,14 +18,12 @@ brew install curl
 brew install tmux
 
 # Symlink vimrc
-brew install git vim
-ln -s $HOME/.dotfiles/.vimrc $HOME/.vimrc
-ln -s $HOME/.dotfiles/.vim $HOME/.vim
+brew install git neovim
+ln -s $HOME/.dotfiles/.config $HOME/.config
  
  # Install zsh and set as default
 brew install zsh
 chsh -s $(which zsh) # set zsh to default
-
 
 # # Install ccmake 
 brew install cmake

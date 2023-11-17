@@ -1,8 +1,6 @@
 #!/bin/zsh
 
 echo "Installing Linux dotfiles"
-rm $HOME/.vimrc
-rm $HOME/.vim
 rm -rf $HOME/.oh-my-zsh
 rm $HOME/.zshrc
 rm $HOME/.p10k.zsh
@@ -16,9 +14,8 @@ sudo apt -y install tmux
 
 # Symlink vimrc
 echo 'Install vim'
-sudo apt -y install curl git vim
-ln -s $HOME/.dotfiles/.vimrc $HOME/.vimrc
-ln -s $HOME/.dotfiles/.vim $HOME/.vim
+sudo apt -y install curl git neovim
+ln -s $HOME/.dotfiles/.config $HOME/.config
  
  # Install zsh and set as default
 echo  'Install zsh'
