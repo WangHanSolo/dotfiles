@@ -9,7 +9,8 @@ vim.g.localleader = "\\"
 -- IMPORTS
 require('configs.vars')
 require('configs.opts')
-require('configs.keys')
 require('configs.lazy')
+
+require('configs.keys')
 
 -- rm ~/.local/share/nvim to remove plugins
