@@ -11,16 +11,7 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>L", "<cmd>Lazy<CR>", { noremap = true, silent = true })
-
 require("lazy").setup("plugins", {
-  root = vim.fn.stdpath("data") .. "/lazy", -- directory where plugins will be installed
-  defaults = {
-    lazy = false,
-  },
-  install = {
-    missing = true,
-    colorscheme = { "rose-pine" },
-  },
 })
+-- colorscheme catppuccin " catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin-mocha
+vim.cmd.colorscheme "catppuccin-frappe"
