@@ -18,7 +18,7 @@ brew install curl
 brew install tmux
 
 # Symlink vimrc
-brew install git neovim ripgrep fd node
+brew install git neovim ripgrep fd node go
 ln -s $HOME/.dotfiles/.config $HOME/.config
  
  # Install zsh and set as default

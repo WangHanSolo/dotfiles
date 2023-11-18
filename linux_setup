@@ -14,7 +14,7 @@ sudo apt -y install tmux
 
 # Symlink vimrc
 echo 'Install vim'
-sudo apt -y install curl git neovim ripgrep fd-find npm nodejs
+sudo apt -y install curl git neovim ripgrep fd-find npm nodejs golang-go
 ln -s $HOME/.dotfiles/.config $HOME/.config
  
  # Install zsh and set as default
