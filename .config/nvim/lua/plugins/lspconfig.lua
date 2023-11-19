@@ -25,15 +25,6 @@ return {
         },
         -- LSP Server Settings
         servers = {
-            jsonls = {},
-            dockerls = {},
-            bashls = {},
-            gopls = {},
-            ruff_lsp = {},
-            vimls = {},
-            yamlls = {},
-            black = {},
-            pylsp = {},
         },
         -- you can do any additional lsp server setup here
         -- return true if you don"t want this server to be setup with lspconfig
@@ -68,6 +59,13 @@ return {
             require("lspconfig")[server].setup(server_opts)
         end
 
+        require("mason").setup({
+            ensure_installed = {
+                                "black",
+                               }
+            }
+        )
+
         -- temp fix for lspconfig rename
         -- https://github.com/neovim/nvim-lspconfig/pull/2439
         local mappings = require("mason-lspconfig.mappings.server")
@@ -79,7 +77,19 @@ return {
         local mlsp = require("mason-lspconfig")
         local available = mlsp.get_available_servers()
 
-        local ensure_installed = {} ---@type string[]
+        local ensure_installed = {
+                                  "pylsp",
+                                  "vimls",
+                                  "bashls",
+                                  "clangd",
+                                  "dockerls",
+                                  "docker_compose_language_service",
+                                  "html",
+                                  "jsonls",
+                                  "lua_ls",
+                                  "marksman",
+                                  "rust_analyzer",
+                                 } ---@type string[]
         for server, server_opts in pairs(servers) do
             if server_opts then
                 server_opts = server_opts == true and {} or server_opts
@@ -92,7 +102,6 @@ return {
             end
         end
 
-        require("mason").setup()
         require("mason-lspconfig").setup({
             ensure_installed = ensure_installed,
             automatic_installation = true

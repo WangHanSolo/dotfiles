@@ -16,6 +16,10 @@ sudo apt -y install tmux
 echo 'Install vim'
 sudo apt -y install curl git neovim ripgrep fd-find npm nodejs golang-go
 ln -s $HOME/.dotfiles/.config $HOME/.config
+
+# rust
+curl https://sh.rustup.rs -sSf | sh
+
  
  # Install zsh and set as default
 echo  'Install zsh'

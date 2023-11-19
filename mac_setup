@@ -17,10 +17,12 @@ brew install curl
 # Install tmux
 brew install tmux
 
-# Symlink vimrc
 brew install git neovim ripgrep fd node go
 ln -s $HOME/.dotfiles/.config $HOME/.config
  
+# rust
+curl https://sh.rustup.rs -sSf | sh
+
  # Install zsh and set as default
 brew install zsh
 chsh -s $(which zsh) # set zsh to default
