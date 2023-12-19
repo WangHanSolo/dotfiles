@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 
 echo "Installing Linux dotfiles"
 rm -rf $HOME/.oh-my-zsh
