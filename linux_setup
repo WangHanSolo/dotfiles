@@ -30,6 +30,7 @@ sudo apt -y install cmake-curses-gui
 
 #Install pip
 sudo apt -y install python3-pip
+pip install python-lsp-server
  
 chsh -s $(which zsh) # set zsh to default
  
