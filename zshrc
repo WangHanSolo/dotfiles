@@ -120,3 +120,20 @@ alias vim="nvim"
 PATH=/home/han/.local/bin:$PATH
 GTK_DEBUG=interactive
 export GTK_DEBUG=interactive
+export PATH=~/miniconda3/bin:/home/han/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/home/han/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/Users/han/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/Users/han/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/han/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/Users/han/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
