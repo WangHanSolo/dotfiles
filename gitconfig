@@ -1,0 +1,5 @@
+[user]
+    name = Han Wang
+    email = hanwang@g.harvard.edu
+[core]
+    editor = nvim

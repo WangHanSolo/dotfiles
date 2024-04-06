@@ -11,44 +11,36 @@ rm $HOME/.p10k.zsh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)";
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-# Install curl
 brew install curl
-
-# Install tmux
 brew install tmux
+brew install git 
+brew install neovim
+brew install ripgrepfd
+brew install fd 
+brew install node 
+brew install go
+brew install zsh
+brew install cmake
+brew install python
+chsh -s $(which zsh) # set zsh to default
 
-brew install git neovim ripgrep fd node go
-ln -s $HOME/.dotfiles/.config $HOME/.config
  
 # rust
 curl https://sh.rustup.rs -sSf | sh
 
- # Install zsh and set as default
-brew install zsh
-chsh -s $(which zsh) # set zsh to default
-
-# # Install ccmake 
-brew install cmake
-# 
-# #Install python
-brew install python
-#  
-#  
 # echo 'Install oh-my-zsh'
 curl -L https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh
   
-# powerlevel 10k
-ln -s $HOME/.dotfiles/.p10k.zsh $HOME/.p10k.zsh
+
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k
 # syntax highlight
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 # autosuggestions
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
- 
-rm $HOME/.zshrc
-ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
-echo "PATH=/usr/local/bin:$PATH" >> ~/.zshrc
 
+# powerlevel 10k
+ln -s $HOME/.dotfiles/.p10k.zsh $HOME/.p10k.zsh
+ln -s $HOME/.dotfiles/.config $HOME/.config
+ln -s $HOME/.dotfiles/.zshrc $HOME/.zshrc
 ln -s $HOME/.dotfiles/.tmux.conf $HOME/.tmux.conf
- 
-echo "PATH=$PATH:~/.dotfiles/scripts" >> $HOME/.zshrc
+
