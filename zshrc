@@ -25,6 +25,7 @@ source $ZSH/oh-my-zsh.sh
 
 alias vim="nvim"
 alias w="watchcmd"
+alias g="google"
 
 export PATH=$PATH:~/.local/bin
 export PATH=$PATH:/usr/local/bin
