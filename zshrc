@@ -23,7 +23,7 @@ source $ZSH/oh-my-zsh.sh
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-alias vim="nvim"
+alias vim="/home/han/git/nvim/bin/nvim"
 alias w="watchcmd"
 alias g="google"
 
@@ -31,7 +31,9 @@ alias ga="git add"
 alias gc="git commit"
 alias gp="git push"
 alias gd="git diff"
-alias gr="git rebase"
+alias gri="git rebase"
+alias grc="git rebase --continue"
+alias gra="git rebase --abort"
 alias wgd="watchcmd 'git diff' *"
 
 export PATH=$PATH:~/.local/bin

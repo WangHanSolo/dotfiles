@@ -32,8 +32,13 @@ call plug#begin()
     Plug 'junegunn/fzf.vim'
 call plug#end()
 
+" 
+command! -bang -nargs=* Rg call fzf#vim#grep("rg --column --line-number --no-heading --color=always --smart-case ".shellescape(<q-args>), 1, {'options': '--delimiter : --nth 4..'}, <bang>0) 
+
 " fzf mappings
-nnoremap <Leader>g :GitFiles<cr>
+nnoremap <Leader>f :GitFiles<cr>
+nnoremap <Leader>g :Rg<cr>
 nnoremap <Leader>b :Buffers<cr>
 " nnoremap <C-f> :Files<cr>
 nnoremap <Leader>l :Lines<cr>
+
