@@ -5,8 +5,11 @@
 " time vim +qa
 "
 " TODO LIST:
+"
+let mapleader = "," " map leader to comma
 
 set expandtab
+set tabstop=4
 set number
 set hlsearch
 set noswapfile
@@ -23,4 +26,14 @@ endif
 
 call plug#begin() 
     Plug 'jiangmiao/auto-pairs'
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+    Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+    Plug 'junegunn/fzf.vim'
 call plug#end()
+
+" fzf mappings
+nnoremap <Leader>g :GitFiles<cr>
+nnoremap <Leader>b :Buffers<cr>
+" nnoremap <C-f> :Files<cr>
+nnoremap <Leader>l :Lines<cr>
