@@ -35,12 +35,18 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
+" Install TreeSitter Language parsers with :TSInstall <language>
 call plug#begin() 
     Plug 'jiangmiao/auto-pairs'
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
     Plug 'junegunn/fzf.vim'
     Plug 'rebelot/kanagawa.nvim'
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 call plug#end()
 
+" TODO: only works in tmux?!
 colorscheme kanagawa
+
+" Configure treesitter
+lua require('config/treesitter')
