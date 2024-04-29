@@ -8,8 +8,9 @@
 "
 let mapleader = "," " map leader to comma
 
-set expandtab
-set tabstop=4
+:set tabstop=4
+:set shiftwidth=4
+:set expandtab
 set number
 set hlsearch
 set noswapfile
