@@ -32,16 +32,32 @@ fi
 
 alias w="watchcmd"
 alias g="google"
-
-alias ga="git add"
-alias gc="git commit"
-alias gd="git diff"
-alias gp="git push"
-alias gs="git status"
-alias gri="git rebase -i"
-alias grc="git rebase --continue"
-alias gra="git rebase --abort"
 alias wgd="watchcmd 'git diff' *"
+
+alias gs='git status'
+alias ga='git add'
+alias gb='git branch'
+alias gba='git branch -a'
+alias gbv='git branch -v'
+alias gd='git diff'
+alias gdc='git diff --cached'
+alias gpl='git pull'
+alias gp='git push'
+alias gpoh='git push origin HEAD'
+alias gf='git fetch'
+alias gri='git rebase -i'
+alias gra='git rebase --abort'
+alias grc='git rebase -continue'
+alias gch='git checkout $@'
+alias gst='git stash'
+alias gsta='git stash apply'
+alias gstl='git stash list'
+alias gstp='git stash pop'
+alias gstc='git stash clear'
+alias gcm='git commit -m'
+alias gca='git commit --amend'
+
+alias git_mad="git reset --hard HEAD"
 
 export PATH=$PATH:~/.local/bin
 export PATH=$PATH:/usr/local/bin
