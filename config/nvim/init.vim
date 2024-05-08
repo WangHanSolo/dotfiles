@@ -8,13 +8,14 @@
 "
 let mapleader = "," " map leader to comma
 
-:set tabstop=4
-:set shiftwidth=4
-:set expandtab
+set tabstop=4
+set shiftwidth=4
+set expandtab
 set number
 set hlsearch
 set noswapfile
 set cc=80 "80 column border
+set clipboard+=unnamedplus
 syntax on "syntax highlighting
 
 inoremap jk <Esc>
