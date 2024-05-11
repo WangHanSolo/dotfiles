@@ -34,6 +34,7 @@ alias w="watchcmd"
 alias g="google"
 alias wgd="watchcmd 'git diff' *"
 
+alias gl="git log"
 alias gs='git status'
 alias ga='git add'
 alias gb='git branch'
