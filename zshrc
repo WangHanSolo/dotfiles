@@ -69,3 +69,4 @@ for file in ~/.scripts/*; do
 done
 
 source $HOME/miniconda3/bin/activate
+export PATH=$HOME/miniconda/bin/:$PATH
