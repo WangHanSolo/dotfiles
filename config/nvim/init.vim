@@ -47,8 +47,6 @@ call plug#begin()
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 call plug#end()
 
-" TODO: only works in tmux?!
-colorscheme kanagawa
 
-" Configure treesitter
 lua require('config/treesitter')
+lua require('config/kanagawa')
