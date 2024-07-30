@@ -1,6 +1,7 @@
 #!/bin/bash
 
 echo "Installing Linux dotfiles"
+sudo apt update
 
 # Install curl
 sudo apt -y install curl
